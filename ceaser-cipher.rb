@@ -7,19 +7,23 @@ def caeser_cipher(someString, shift)
 			if upCase.include?(x)
 				index = upCase.index(x)
 				newNum = index.to_i + shift.to_i
-				if newNum > 25
-					newNum = newNum - 25
-				end
+					if newNum > 25
+						newNum = newNum - 25
+					end
 				newLet = upCase[newNum]
+
 				encoded << newLet
+
 			elsif lowCase.include?(x)
 				index = lowCase.index(x)
 				newNum = index.to_i + shift.to_i
-				if newNum > 25
-					newNum = newNum - 25
-				end
+					if newNum > 25
+						newNum = newNum - 25
+					end
 				newLet = lowCase[newNum]
-				encoded << newLet		
+
+				encoded << newLet	
+					
 			else
 				encoded << x
 			end
