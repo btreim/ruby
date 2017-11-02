@@ -190,8 +190,6 @@ module Enumerable
 			index += 1
 		end
 		p total
-
-
 	end
 
 end
@@ -201,9 +199,11 @@ def multiply_els(array)
 	array.my_inject {|sum, n| sum * n}
 end
 
+double_me = Proc.new {|x| x + x}
+
 #TESTS#
 
-double_me = Proc.new {|x| x + x}
+
 # [1,4,234,2].my_each {|n| p n}
 # ["hello","string"].my_each_with_index {|value, index| puts "#{index}: #{value}"}
 # [1,2,3,4,5,8,9].my_select {|num| num.even?}
